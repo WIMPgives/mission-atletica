@@ -10,7 +10,6 @@
 
 		<div class="row footer">
 			<div class="col-md-9"> footer info</div>
-			<div class="col-md-3">Social Media</div>
 			</div>
 		</div>
 

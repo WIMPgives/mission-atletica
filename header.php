@@ -22,9 +22,9 @@
 	<div id="content" class="site-content container">
 
 	<div class="row box">
-	<div class="col-md-9 main">
+	<div class="col-md-12 main">
 		<div class="row header">
-			<div class="col-md-2">logo</div>
-			<div class="col-md-7">Menu</div>
-			<div class="col-md-30">social-media</div>
+			<div class="col-md-3">logo</div>
+			<div class="col-md-6">Menu</div>
+			<div class="col-md-3"><h2>sample testing text that isn't too long</h2></div>
 		</div>
