@@ -14,7 +14,7 @@ get_header(); ?>
 		</div>
 
 		<div class="row  content">
-			<div class="col-md-9">article</div>
+			<div class="col-md-9"><?php the_content(); ?></div>
 		</div>
 	</div>
 
