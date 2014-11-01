@@ -7,6 +7,8 @@
 ?>
 
 <div class="col-md-3 sidebar">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	
 	<div class="row donate">
 		<div class="left-col">
 			<img src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-3-1/512/coin-circle-dollar-128.png" width="100px" height="100px">
