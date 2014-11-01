@@ -24,7 +24,7 @@
 	<div class="row box">
 	<div class="col-md-12 main">
 		<div class="row header">
-			<div class="col-md-3"><a href="/"><img class="img-responsive" src="/wp-content/themes/mission-atletica/images/logo_338x120.png" alt="Mission Atletica" /></a></div>
+			<div class="col-md-3"><a href="/"><img class="img-responsive" src="/wp-content/themes/mission-atletica/images/logo_338x120.png" width="338" height="120" alt="Mission Atletica" /></a></div>
 			<div class="col-md-6">
 				<?php wp_nav_menu( array(
 					'theme_location' => 'primary',
@@ -36,5 +36,11 @@
 					'walker'         => new wp_bootstrap_navwalker(),
 				) ); ?>
 			</div>
-			<div class="col-md-3"><h2>sample testing text that isn't too long</h2></div>
+			<div class="col-md-3">
+				<ul class="social">
+					<li><a href="https://www.facebook.com/missionatletica"><img src="/wp-content/themes/mission-atletica/images/social/fb.png" alt="Facebook" width="20" height="20" /></a></li>
+					<li><a href="https://www.linkedin.com/pub/edgar-hernandez/58/880/708"><img src="/wp-content/themes/mission-atletica/images/social/li.png" alt="LinkedIn" width="20" height="20" /></a></li>
+					<?php /*?><li><a href="http://www.youtube.com/----FILL IN YOUR YOUTUBE CHANNEL HERE----"><img src="/wp-content/themes/mission-atletica/images/social/yt.png" alt="YouTube" width="20" height="20" /></a></li><?php */?>
+				</ul>
+			</div>
 		</div>

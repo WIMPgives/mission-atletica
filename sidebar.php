@@ -20,6 +20,7 @@
 	</div>
 	<div class="row video"><img src="<?php echo get_template_directory_uri(); ?>/images/video-player-button.png" width="80%" height="80%;"></div>
 	<div class="row donate">
+	
 	<img src="<?php echo get_template_directory_uri(); ?>/images/shoeSimbol.png">
 	<h4>Donate your shoes</h4>
 	<p>shoes needed 9999/9999<br />
@@ -29,6 +30,7 @@
 		30%
 	 	</div>
 	</div>
+
 	</div>
 	<div class="row"><span class="btn btn-primary"> Retailers go here</span></div>
 </div>
