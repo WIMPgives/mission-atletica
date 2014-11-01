@@ -15,18 +15,16 @@ get_header(); ?>
 			<div class="col-md-3">read our story</div>
 		</div>
 
-		<div class="row  content">
-			<div class="col-md-9">article</div>
+		<div class="row content">
+			<div class="col-md-12">article</div>
 		</div>
 	</div>
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 
 <div class="sponsor-wrapper row">
-	<div class="row">
-		<?php mission_atletica_list_sponsors(); ?>
-	</div>
+	<?php mission_atletica_list_sponsors(); ?>
 </div>
-		
+
 
 <?php get_footer(); ?>
