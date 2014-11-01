@@ -108,7 +108,6 @@ p
 
 .navbar-nav
 {
-
 	margin-top:21px;
 }
 ul.social
@@ -126,10 +125,12 @@ ul.social li {
 	font-style: italic;
 }
 .text-highlight-dark {
-	color:#000;
+	color:      #000;
 	font-style: italic;
 }
-.carousel-caption
+.sidebar-widget {
+	margin-bottom:20px;
+}.carousel-caption
 {
 	padding: 0 15px;
 	right: 0;
