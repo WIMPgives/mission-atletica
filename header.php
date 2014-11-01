@@ -24,7 +24,7 @@
 	<div class="row box">
 	<div class="col-md-12 main">
 		<div class="row header">
-			<div class="col-md-3"><a href="/"><img class="img-responsive" src="/wp-content/themes/mission-atletica/images/logo_338x120.png" width="338" height=:120" alt="Mission Atletica" /></a></div>
+			<div class="col-md-3"><a href="/"><img class="img-responsive" src="/wp-content/themes/mission-atletica/images/logo_338x120.png" width="338" height="120" alt="Mission Atletica" /></a></div>
 			<div class="col-md-6">
 				<?php wp_nav_menu( array(
 					'theme_location' => 'primary',
