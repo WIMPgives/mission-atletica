@@ -10,9 +10,19 @@ get_header(); ?>
 		</div>
 
 		<div class="row  quicklinks">
-			<div class="col-md-3">support</div>
-			<div class="col-md-3">become a sponser</div>
-			<div class="col-md-3">read our story</div>
+			<div class="col-md-12">
+				<div class="btn-group btn-group-justified">
+				  <div class="btn-group">
+				    <button type="button" class="btn btn-default">Support</button>
+				  </div>
+				  <div class="btn-group">
+				    <button type="button" class="btn btn-default">Become a Sponsor</button>
+				  </div>
+				  <div class="btn-group">
+				    <button type="button" class="btn btn-default">Read our Story</button>
+				  </div>
+				</div>
+			</div>
 		</div>
 
 		<div class="row  content">
