@@ -107,6 +107,11 @@ require get_template_directory() . '/includes/bootstrap-walker.php';
 require get_template_directory() . '/includes/template-tags.php';
 
 /**
+ * Load our post types
+ */
+require get_template_directory() . '/includes/post-types.php';
+
+/**
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/includes/extras.php';
