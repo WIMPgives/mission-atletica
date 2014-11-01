@@ -11,17 +11,38 @@ get_header(); ?>
 
 		<div class="row  quicklinks">
 			<div class="col-md-12">
+			
+				<div class="col-md-4">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/edgarWshoes200.png" alt="Read our story"  /><p class="btn-caption">Read Our Story</p><p class="btn-text">
+Meet the man behind the mission, Edgar Hernandez.<br /><a href="">Learn more...</a></p>
+				</div>
+				<div class="col-md-4">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/OurMission.png" alt="Support our mission" /><p class="btn-caption">Support Our Mission</p><p class="btn-text">
+Donate shoes, money or your time.<br />
+<a href="">Learn more...</a></p>
+				</div>
+				<div class="col-md-4">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/SponsorsPict.png" alt="Become a sponsor" /><p class="btn-caption">Become a Sponsor</p><p class="btn-text">
+Help kids experience the joy of running.<br /><a href="">Learn more...</a></p>
+				</div>
+
+			<!--
 				<div class="btn-group btn-group-justified">
 				  <div class="btn-group">
-				    <button type="button" class="btn btn-default">Support</button>
+				    <button type="button" class="btn btn-default"><img src="<?php echo get_template_directory_uri(); ?>/images/edgarWshoes200.png" alt="Read our story" /><br /><strong>Read Our Story</strong><br />
+Meet the man behind the mission, Edgar Hernandez.<br />Learn more...</button>
 				  </div>
 				  <div class="btn-group">
-				    <button type="button" class="btn btn-default">Become a Sponsor</button>
+				    <button type="button" class="btn btn-default"><img src="<?php echo get_template_directory_uri(); ?>/images/OurMission.png" alt="Support our mission" /><br /><strong>Support Our Mission</strong><br />
+Donate shoes, money or your time.<br />
+Learn more...</button>
 				  </div>
 				  <div class="btn-group">
-				    <button type="button" class="btn btn-default">Read our Story</button>
+				    <button type="button" class="btn btn-default"><img src="<?php echo get_template_directory_uri(); ?>/images/SponsorsPict.png" alt="Become a sponsor" /><br /><strong>Become a Sponsor</strong><br />
+Help kids experience the joy of running.<br />Learn more...</button>
 				  </div>
 				</div>
+			-->
 			</div>
 		</div>
 

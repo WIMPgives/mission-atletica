@@ -15,10 +15,46 @@ h3
 	font-weight: 700;
 	font-size: 20px;
 }
+
 p
 {
 	font-weight: 400;
 	font-size: 16px;
+}
+
+.btn-caption
+{
+	font-family: "Oswald", sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom:0;
+	margin-top: 5px;
+}
+.btn-text
+{
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 1.2;
+}
+.btn-text a
+{
+	font-family: "Oswald", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color:#0083CA;
+}
+
+.quicklinks {
+	text-align: center;
+}
+
+.quicklinks img {
+	margin: 10px 0;
+	max-width: 100%;
+	height: auto;
 }
 
 .btn
