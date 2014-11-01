@@ -90,7 +90,7 @@ function mission_atletica_resources() {
 	// Add define( 'SCRIPT_DEBUG', TRUE ); to wp_config.php (FOR DEV SERVERS ONLY!)
 	$min = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-	wp_enqueue_style( 'mission-atletica-fonts', "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:300", array(), MAWP_VERSION );
+	wp_enqueue_style( 'mission-atletica-fonts', "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:400", array(), MAWP_VERSION );
 	wp_enqueue_style( 'mawp-bootstrap', get_template_directory_uri() . '/assets/css/vendor/bootstrap.min.css', array(), '3.3.0' );
 	wp_enqueue_style( 'mission-atletica-style', get_template_directory_uri() . "/assets/css/mission-atletica.css", array(), MAWP_VERSION );
 
