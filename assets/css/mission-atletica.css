@@ -30,6 +30,7 @@ p
 
 .donate img {
 	float: left;
+	padding: 3px;
 	padding-right: 10px;
 }
 
@@ -48,6 +49,11 @@ p
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
+
+.footer {
+
+}
+
 .btn {
 	font-family: "Oswald", sans-serif;
 	font-weight: 400;
