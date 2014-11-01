@@ -23,5 +23,8 @@ p
 .btn
 {
 	font-family: "Oswald", sans-serif;
-	font-weight: 300;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	height: 40px;
+	line-height: 40px;
 }
