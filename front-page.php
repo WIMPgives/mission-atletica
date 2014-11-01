@@ -4,7 +4,9 @@ get_header(); ?>
 
 	<div class="col-md-9">
 		<div class="row slideshow">
-			<div class="col-md-9">slideshow</div>
+			<div class="col-md-12">
+				<?php echo do_shortcode( '[image-carousel]' ); ?>
+			</div>
 		</div>
 
 		<div class="row  quicklinks">
