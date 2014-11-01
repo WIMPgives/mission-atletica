@@ -85,6 +85,7 @@ p
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+	margin-top:20px;
 }
 
 .donate .progress-bar {
@@ -123,7 +124,16 @@ ul.social li {
 }
 .sidebar-widget {
 	margin-bottom:20px;
-}.carousel-caption
+}
+.sidebar-widget a {
+	color:#000;
+	text-decoration: none;
+}
+.sidebar-widget.donate img {
+	position:relative;
+	top:-21px;
+}
+.carousel-caption
 {
 	padding: 0 15px;
 	right: 0;
