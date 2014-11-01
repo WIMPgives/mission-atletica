@@ -20,3 +20,32 @@ p
 	font-weight: 400;
 	font-size: 16px;
 }
+
+
+.donate {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background-color: #0083CA;
+}
+
+.donate img {
+	float: left;
+	padding-right: 10px;	
+}
+
+.donate .progress {
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 5%;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+.donate .progress-bar {
+	 background-color: #7fc1e4;
+	 -webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
