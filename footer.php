@@ -8,16 +8,16 @@
  */
 ?>
 
-	</div><!-- #content -->
+		<div class="row footer">
+			<div class="col-md-9"> footer info</div>
+			<div class="col-md-3">Social Media</div>
+			</div>
+		</div>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'mission-atletica' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'mission-atletica' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mission-atletica' ), 'Mission Atletica', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+
+	</div>
+
+	</div>
 
 <?php wp_footer(); ?>
 
