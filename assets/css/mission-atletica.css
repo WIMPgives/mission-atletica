@@ -149,3 +149,28 @@ ul.social li {
 {
 	font-family: "Oswald", sans-serif;
 }
+
+.footer
+{
+	margin-top: 100px;
+	background: #0083ca;
+	color: #fff;
+	padding: 20px 0;
+}
+.footer li, .footer p
+{
+	font-size: 14px;
+}
+.footer li
+{
+	list-style: none;
+}
+.footer p
+{
+	text-align: right;
+}
+.footer a
+{
+	color: #fff;
+	text-decoration: underline;
+}
