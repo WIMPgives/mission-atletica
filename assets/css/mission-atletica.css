@@ -116,13 +116,19 @@ ul.social
 	float: right;
 	margin-top: 21px;
 }
-ul.social li
-{
-	list-style: none;
-	float: left;
+ul.social li {
+	list-style:   none;
+	float:        left;
 	padding-left: 15px;
 }
-
+.text-highlight-light {
+	color:#fff;
+	font-style: italic;
+}
+.text-highlight-dark {
+	color:#000;
+	font-style: italic;
+}
 .carousel-caption
 {
 	padding: 0 15px;
