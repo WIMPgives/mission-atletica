@@ -92,7 +92,7 @@ function mission_atletica_resources() {
 
 	wp_enqueue_style( 'mission-atletica-style', "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:300", array(), MAWP_VERSION );
 	wp_enqueue_style( 'mawp-bootstrap', get_template_directory_uri() . '/assets/css/vendor/bootstrap.min.css', array(), '3.3.0' );
-	wp_enqueue_style( 'mission-atletica-style', get_template_directory_uri() . "/assets/css/mission-atletica{$min}.css", array(), MAWP_VERSION );
+	wp_enqueue_style( 'mission-atletica-style', get_template_directory_uri() . "/assets/css/mission-atletica.css", array(), MAWP_VERSION );
 
 	wp_enqueue_script( 'mission-atletica-navigation', get_template_directory_uri() . "/assets/js/mission-atletica{$min}.js", array( 'jquery' ), MAWP_VERSION, true );
 
