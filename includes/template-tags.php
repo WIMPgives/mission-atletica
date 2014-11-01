@@ -163,3 +163,24 @@ function mission_atletica_category_transient_flusher() {
 }
 add_action( 'edit_category', 'mission_atletica_category_transient_flusher' );
 add_action( 'save_post',     'mission_atletica_category_transient_flusher' );
+
+
+/**
+ * Fetch the list of sponsors
+ *
+ * @return mixed
+ */
+function mission_atletica_get_sponsors() {
+	if ( false === ( $sponsors = get_transient( 'mawp_sponsors' ) ) ) {
+		$args     = array(
+			'post_type'      => 'sponsors',
+			'posts_per_page' => 20,
+		);
+		$sponsors_query = new WP_Query( $args );
+		$sponsors       = $sponsors->posts;
+
+		set_transient( 'mawp_sponsors', $sponsors, HOUR_IN_SECONDS );
+	}
+
+	return $sponsors;
+}
