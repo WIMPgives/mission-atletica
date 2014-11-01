@@ -177,10 +177,34 @@ function mission_atletica_get_sponsors() {
 			'posts_per_page' => 20,
 		);
 		$sponsors_query = new WP_Query( $args );
-		$sponsors       = $sponsors->posts;
+		$sponsors       = $sponsors_query->posts;
 
 		set_transient( 'mawp_sponsors', $sponsors, HOUR_IN_SECONDS );
 	}
 
 	return $sponsors;
+}
+
+/**
+ * Generates the HTML list for the sponsors listing on the homepage
+ *
+ * @return void
+ */
+function mission_atletica_list_sponsors() {
+	$sponsors = mission_atletica_get_sponsors();
+
+	if ( ! empty( $sponsors ) && is_array( $sponsors ) ) :
+		$i = 1;
+		foreach ( $sponsors as $sponsor ) :
+			if ( $i % 4 === 0 ) : ?>
+				</div>
+				<div class="row">
+			<?php endif; ?>
+			<div class="col-lg-4">
+				<a href="<?php echo esc_url( get_the_permalink( $sponsor->ID ) ); ?>">
+					<?php echo get_the_post_thumbnail( $sponsor->ID, 'mawp-sponsor-hp' ); ?>
+				</a>
+			</div>
+		<?php $i++; endforeach;
+	endif;
 }

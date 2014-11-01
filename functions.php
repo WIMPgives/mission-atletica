@@ -55,6 +55,11 @@ if ( ! function_exists( 'mission_atletica_setup' ) ) :
 		add_theme_support( 'html5', array(
 			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 		) );
+
+		/**
+		 * Register custom image sizes
+		 */
+		add_image_size( 'mawp-sponsor-hp', 150, 150 );
 	}
 endif; // mission_atletica_setup
 add_action( 'after_setup_theme', 'mission_atletica_setup' );
