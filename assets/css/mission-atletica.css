@@ -30,7 +30,7 @@ p
 
 .donate img {
 	float: left;
-	padding-right: 10px;	
+	padding-right: 10px;
 }
 
 .donate .progress {
@@ -48,13 +48,14 @@ p
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
-
-.btn
-{
+.btn {
 	font-family: "Oswald", sans-serif;
 	font-weight: 400;
 	letter-spacing: 1.5px;
 	height: 40px;
 	line-height: 1;
+}
 
+.navbar-nav {
+	margin-top:21px;
 }
