@@ -24,7 +24,7 @@
 	<div class="row box">
 	<div class="col-md-12 main">
 		<div class="row header">
-			<div class="col-md-3">logo</div>
+			<div class="col-md-3"><a href="/"><img class="img-responsive" src="/wp-content/themes/mission-atletica/images/logo_338x120.png" alt="Mission Atletica" /></a></div>
 			<div class="col-md-6">Menu</div>
 			<div class="col-md-3"><h2>sample testing text that isn't too long</h2></div>
 		</div>
