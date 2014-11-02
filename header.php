@@ -34,7 +34,7 @@
 						<ul class="social">
 							<li><a href="https://www.facebook.com/missionatletica"><img src="/wp-content/themes/mission-atletica/images/social/fb.png" alt="Facebook" width="20" height="20" /></a></li>
 							<li><a href="https://www.linkedin.com/pub/edgar-hernandez/58/880/708"><img src="/wp-content/themes/mission-atletica/images/social/li.png" alt="LinkedIn" width="20" height="20" /></a></li>
-							<?php /*?><li><a href="http://www.youtube.com/----FILL IN YOUR YOUTUBE CHANNEL HERE----"><img src="/wp-content/themes/mission-atletica/images/social/yt.png" alt="YouTube" width="20" height="20" /></a></li><?php */?>
+							<li><a href="https://www.youtube.com/channel/UCm54G-1cM1kK_AMRBWhV_qA"><img src="/wp-content/themes/mission-atletica/images/social/yt.png" alt="YouTube" width="20" height="20" /></a></li>
 						</ul>
 					</div>
 
