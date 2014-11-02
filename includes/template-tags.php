@@ -198,7 +198,7 @@ function mission_atletica_list_sponsors() {
 	if ( ! empty( $sponsors ) && is_array( $sponsors ) ) : ?>
 	<div class="row">
 		<?php foreach ( $sponsors as $sponsor ) : ?>
-			<div class="col-lg-2">
+			<div class="col-md-2 col-sm-4 col-xs-6">
 				<a href="<?php echo esc_url( get_the_permalink( $sponsor->ID ) ); ?>">
 					<?php echo get_the_post_thumbnail( $sponsor->ID, 'mawp-sponsor-hp' ); ?>
 				</a>
