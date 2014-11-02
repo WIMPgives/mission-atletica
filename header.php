@@ -43,7 +43,7 @@
 							'theme_location'    => 'primary',
 							'depth'             => 2,
 							'container'         => 'div',
-							'container_class'   => 'collapse navbar-collapse',
+							'container_class'   => 'navbar-collapse',
 							'container_id'      => 'bs-example-navbar-collapse-1',
 							'menu_class'        => 'nav navbar-nav',
 							'walker'            => new wp_bootstrap_navwalker(),
