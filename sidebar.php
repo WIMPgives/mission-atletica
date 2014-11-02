@@ -12,7 +12,7 @@
 	<div class="row donate invest sidebar-widget">
 		<a href="#">
 			<div class="left-col">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneySimbol.png">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneySimbol.png" alt="Invest">
 			</div>
 			<div class="right-col">
 				<h2>Invest</h2>
@@ -29,7 +29,7 @@
 	<div class="row donate sidebar-widget">
 		<a href="#">
 			<div class="left-col">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shoeSimbol.png">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shoeSimbol.png" alt="Donate Shoes">
 			</div>
 			<div class="right-col">
 				<h2>Donate Shoes</h2>
