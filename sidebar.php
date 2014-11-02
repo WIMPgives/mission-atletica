@@ -9,7 +9,7 @@
 <div class="col-md-3 sidebar">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
-	<div class="row donate sidebar-widget">
+	<div class="row donate invest sidebar-widget">
 		<a href="#">
 			<div class="left-col">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneySimbol.png">
