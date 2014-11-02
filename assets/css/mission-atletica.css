@@ -129,9 +129,16 @@ ul.social li {
 	color:#000;
 	text-decoration: none;
 }
+.sidebar-widget.donate .left-col, .sidebar-widget.invest .left-col {
+	width:35%;
+}
+.sidebar-widget.donate .right-col, .sidebar-widget.invest .right-col {
+	width:65%;
+}
 .sidebar-widget.donate img {
 	position:relative;
-	top:-21px;
+	top:11px;
+	left:20px;
 }
 .carousel-caption
 {
@@ -176,4 +183,10 @@ ul.social li {
 {
 	color: #fff;
 	text-decoration: underline;
+}
+.left-col {
+	float:left;
+}
+.right-col {
+	float:right;
 }

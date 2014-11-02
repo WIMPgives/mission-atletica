@@ -12,7 +12,7 @@
 	<div class="row donate sidebar-widget">
 		<a href="#">
 			<div class="left-col">
-				<img src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-3-1/512/coin-circle-dollar-128.png" width="100px" height="100px">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneySimbol.png">
 			</div>
 			<div class="right-col">
 				<h2>Invest</h2>
@@ -29,7 +29,7 @@
 	<div class="row donate sidebar-widget">
 		<a href="#">
 			<div class="left-col">
-				<img src="http://cdn.flaticon.com/png/256/38703.png" width="100px" height="100px">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shoeSimbol.png">
 			</div>
 			<div class="right-col">
 				<h2>Donate Shoes</h2>
@@ -44,6 +44,5 @@
 		</a>
 	</div>
 	<div class="row video sidebar-widget">
-		<img src="http://bestcamera.biz/wp-content/uploads/2014/08/video-player-button.png" width="80%" height="80%;">
 	</div>
 </div>
