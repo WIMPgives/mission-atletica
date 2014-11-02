@@ -23,8 +23,8 @@
 
 	<div class="col-md-12 main">
 		<div class="row header">
-			<div class="col-md-3"><a href="/">
-				<img class="img-responsive center-block" src="<?php echo get_template_directory_uri(); ?>/images/logo_338x120.png" width="338" height="120" alt="Mission Atletica" /></a>
+			<div class="col-md-3"><a href="<?php echo esc_url( home_url() ); ?>">
+				<img class="img-responsive center-block" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" width="338" height="120" alt="Mission Atletica" /></a>
 			</div>
 
 				<div class="col-md-9">
