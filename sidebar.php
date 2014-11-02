@@ -10,7 +10,7 @@
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 
 	<div class="row donate invest sidebar-widget">
-		<a href="#">
+		<a href="http://mawp.wpengine.com/donate/">
 			<div class="left-col">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/moneySimbol.png" alt="Invest">
 			</div>
@@ -27,7 +27,7 @@
 		</a>
 	</div>
 	<div class="row donate sidebar-widget">
-		<a href="#">
+		<a href="http://mawp.wpengine.com/drop-locations/">
 			<div class="left-col">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/shoeSimbol.png" alt="Donate Shoes">
 			</div>
