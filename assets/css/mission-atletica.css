@@ -122,3 +122,11 @@ ul.social li
 	float: left;
 	padding-left: 15px;
 }
+
+
+.sponsor-wrapper img{
+	margin: 5px;
+	margin-bottom: 30px;
+	width: 75px;
+	height: auto;
+}

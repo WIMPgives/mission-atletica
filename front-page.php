@@ -1,7 +1,7 @@
 <?php
 
 get_header(); ?>
-
+<div class="row">
 	<div class="col-md-9">
 		<div class="row slideshow">
 			<div class="col-md-12">
@@ -52,8 +52,10 @@ Help kids experience the joy of running.<br />Learn more...</button>
 	</div>
 
 	<?php get_sidebar(); ?>
+</div>
 
-<div class="sponsor-wrapper row">
+<div class="sponsor-wrapper">
+<div class="sponsor-intro col-md-12"><h3>Our Sponsors</h3></div>
 	<?php mission_atletica_list_sponsors(); ?>
 </div>
 

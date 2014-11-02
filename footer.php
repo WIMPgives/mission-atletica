@@ -10,7 +10,6 @@
 
 		<div class="row footer">
 			<div class="col-md-9"> footer info and various text that is placeholder</div>
-			</div>
 		</div>
 
 

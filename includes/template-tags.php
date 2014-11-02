@@ -175,6 +175,8 @@ function mission_atletica_get_sponsors() {
 		$args     = array(
 			'post_type'      => 'sponsors',
 			'posts_per_page' => 20,
+			'orderby' => 'name', 
+			'order' => 'ASC', 
 		);
 		$sponsors_query = new WP_Query( $args );
 		$sponsors       = $sponsors_query->posts;
@@ -194,13 +196,16 @@ function mission_atletica_list_sponsors() {
 	$sponsors = mission_atletica_get_sponsors();
 
 	if ( ! empty( $sponsors ) && is_array( $sponsors ) ) :
+		?>
+	<div class="row">
+	<?php
 		$i = 1;
 		foreach ( $sponsors as $sponsor ) :
-			if ( $i % 4 === 0 ) : ?>
+			if ( $i % 7 === 0 ) : ?>
 				</div>
 				<div class="row">
 			<?php endif; ?>
-			<div class="col-lg-4">
+			<div class="col-lg-2">
 				<a href="<?php echo esc_url( get_the_permalink( $sponsor->ID ) ); ?>">
 					<?php echo get_the_post_thumbnail( $sponsor->ID, 'mawp-sponsor-hp' ); ?>
 				</a>
