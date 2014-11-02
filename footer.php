@@ -8,7 +8,8 @@
  */
 ?>
 	</div>
-
+</div>
+</div>
 		<div class="row footer">
 			<div class="container">
 				<div class="col-md-8">

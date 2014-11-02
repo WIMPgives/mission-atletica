@@ -21,13 +21,12 @@
 <body <?php body_class(); ?>>
 	<div id="content" class="site-content container">
 
-	<div class="row box"> 
-	<div class="col-md-12 main"> 
+	<div class="col-md-12 main">
 		<div class="row header">
 			<div class="col-md-3"><a href="/">
 				<img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/logo_338x120.png" width="338" height="120" alt="Mission Atletica" /></a>
 			</div>
-			
+
 				<div class="col-md-9">
 
 					<div class="row social-media">
@@ -51,7 +50,7 @@
 					</div>
 
 				</div>
-			
+
 
 
 		</div>
