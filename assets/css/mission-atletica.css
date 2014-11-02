@@ -205,3 +205,10 @@ ul.social li {
 .right-col {
 	float:right;
 }
+.left-footer {
+	padding:0;
+	margin:0;
+}
+.left-footer li {
+	float:none;
+}
