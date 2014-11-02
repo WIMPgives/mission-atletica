@@ -7,16 +7,21 @@
  * @package Mission Atletica
  */
 ?>
+	</div>
 
 		<div class="row footer">
-			<div class="col-md-9"> footer info and various text that is placeholder</div>
+			<div class="container">
+				<div class="col-md-8">
+					<ul>
+						<li>Providing running shoes and running races for the youth of Guatemala.</li>
+						<li><a href="/">Mission Atletica</a> is a 501C(3) non-profit organization. Marin Link Inc. serves as the fiscal sponsor.</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<p>&copy; <a href="/">Mission Atletica</a>, <?= date("Y"); ?>. All rights reserved.</p>
+				</div>
+			</div>
 		</div>
-
-
-	</div>
-
-	</div>
-
 <?php wp_footer(); ?>
 
 </body>
