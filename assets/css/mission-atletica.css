@@ -138,6 +138,11 @@ ul.social li {
 .sidebar-widget.donate img {
 	position:relative;
 	top:11px;
+	left:5px;
+}
+.sidebar-widget.invest img {
+	position:relative;
+	top:11px;
 	left:20px;
 }
 .carousel-caption
