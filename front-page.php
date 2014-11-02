@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="row  quicklinks">
 				<div class="col-md-12">
 
-					<div class="col-md-4">
+					<div class="col-sm-4">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/edgarWshoes200.png" alt="Read our story" />
 
 						<p class="btn-caption">Read Our Story</p>
@@ -21,7 +21,7 @@ get_header(); ?>
 						<p class="btn-text">
 							Meet the man behind the mission.<br /><a href="http://mawp.wpengine.com/about-mission-atletica/">Learn more...</a></p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-sm-4">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/OurMission.png" alt="Support our mission" />
 
 						<p class="btn-caption">Support Our Mission</p>
@@ -29,7 +29,7 @@ get_header(); ?>
 						<p class="btn-text">
 							Donate shoes, money or your time.<br /><a href="http://mawp.wpengine.com/donate/">Learn more...</a></p>
 					</div>
-					<div class="col-md-4">
+					<div class="col-sm-4">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/SponsorsPict.png" alt="Become a sponsor" />
 
 						<p class="btn-caption">Become a Sponsor</p>
