@@ -103,6 +103,17 @@ p, li
 {
 	margin-top: 0;
 }
+.navbar-toggle
+{
+	float: left;
+	margin-top: -40px;
+	border: 1px solid #999;
+	margin-bottom: 0;
+}
+.navbar-toggle .icon-bar
+{
+	background: #666;
+}
 ul.social
 {
 	float: right;
