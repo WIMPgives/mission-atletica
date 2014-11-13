@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
 				src: [
 					'assets/js/src/*.js'
 				],
-				dest: 'assets/js/mission-atletica.js'
+				dest: 'assets/js/mission-atletica.admin.js'
 			}
 		},
 		jshint: {
@@ -45,7 +45,7 @@ module.exports = function( grunt ) {
 		uglify: {
 			all: {
 				files: {
-					'assets/js/mission-atletica.min.js': ['assets/js/mission-atletica.js']
+					'assets/js/mission-atletica.min.js': ['assets/js/mission-atletica.admin.js']
 				},
 				options: {
 					banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +

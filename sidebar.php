@@ -18,10 +18,10 @@
 				<h2>Invest</h2>
 				<p>Fundraising Goal <span class="text-highlight-light">$3000</span>
 				Donations to date <span class="text-highlight-light">$2500</span></p>
-				<div class="progress">
-				    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+			</div>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
 					90%
-				    </div>
 				</div>
 			</div>
 		</a>
@@ -35,10 +35,10 @@
 				<h2>Donate Shoes</h2>
 				<p>Shoes needed <span class="text-highlight-light">10,000</span><br />
 				Shoes donated <span class="text-highlight-light">9,5000</span></p>
-				<div class="progress">
-				    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+			</div>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
 					90%
-				    </div>
 				</div>
 			</div>
 		</a>
