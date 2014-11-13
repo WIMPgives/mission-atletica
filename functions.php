@@ -92,9 +92,11 @@ function mission_atletica_resources() {
 
 	wp_enqueue_style( 'mission-atletica-fonts', "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:400", array(), MAWP_VERSION );
 	wp_enqueue_style( 'mawp-bootstrap', get_template_directory_uri() . '/assets/css/vendor/bootstrap.min.css', array(), '3.3.0' );
+	wp_enqueue_style( 'bootstrap-select-style', get_template_directory_uri() . "/assets/css/bootstrap-select.min.css", array(), '1.6.3' );
 	wp_enqueue_style( 'mission-atletica-style', get_template_directory_uri() . "/assets/css/mission-atletica.css", array(), MAWP_VERSION );
 
 	wp_enqueue_script( 'mawp-bootstrap', get_template_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ), '3.3.0', true );
+	wp_enqueue_script( 'bootstrap-select-js', get_template_directory_uri() . "/assets/js/bootstrap-select.min.js", array( 'jquery' ), '1.6.3', true );
 	wp_enqueue_script( 'mission-atletica-navigation', get_template_directory_uri() . "/assets/js/mission-atletica.js", array( 'jquery' ), MAWP_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -120,25 +122,27 @@ function donate_func( $atts )
 <input name="p3" id="pp_p3" type="hidden" value="24" disabled />
 <input name="t3" id="pp_t3" type="hidden" value="M" disabled />
 <input name="page_style" type="hidden" value="primary" />
-<input name="image_url" type="hidden" value="http://mawp.wpengine.com/wp-content/themes/mission-atletica/images/PP_logo_313x100.png" />
-<input name="cpp_logo_image" type="hidden" value="http://mawp.wpengine.com/wp-content/themes/mission-atletica/images/PP_logo_190x53.png" />
+<input name="image_url" type="hidden" value="<?php echo get_template_directory_uri(); ?>/images/PP_logo_313x100.png" />
+<input name="cpp_logo_image" type="hidden" value="<?php echo get_template_directory_uri(); ?>/images/PP_logo_190x53.png" />
 <input name="no_note" type="hidden" value="1" />
 <input name="no_shipping" type="hidden" value="1" />
-<input name="return" type="hidden" value="http://mawp.wpengine.com/thank-you/" />
+<input name="return" type="hidden" value="<?php echo esc_url( home_url() ); ?>/thank-you/" />
 <input name="rm" type="hidden" value="1" />
 <input name="cbt" type="hidden" value="Mission Atletica" />
-<input name="cancel_return" type="hidden" value="http://mawp.wpengine.com/donate/" />
+<input name="cancel_return" type="hidden" value="<?php echo esc_url( home_url() ); ?>/donate/" />
 <input name="item_name" type="hidden" value="Donation to Mission Atletica" />
-<select name="amount" id="pp_amount">
+<input name="business" type="hidden" value="MW68R2RMFJEAA" />
+<select name="amount" id="pp_amount" class="selectpicker">
 	<option value="25.00">$25</option>
 	<option value="50.00">$50</option>
 	<option value="100.00" selected>$100</option>
 	<option value="500.00">$500</option>
 	<option value="">Other</option>
 </select>
-<input name="business" type="hidden" value="MW68R2RMFJEAA" />
-<button class="btn btn-primary btn-lg">Donate</button>
+<br/>
 <label><input type="checkbox" name="src" id="pp_src" value="1" /> Make it monthly</label>
+<br/>
+<button class="btn btn-primary btn-lg">Donate</button>
 </form>
 <?php
 		$strResult = ob_get_clean();

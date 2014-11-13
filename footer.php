@@ -53,6 +53,7 @@ function handleMonthlyDonation()
 	}
 }
 ( function( $ ){
+	$('.selectpicker').selectpicker();
 	handleMonthlyDonation();
 	$("#pp_src").on("click", handleMonthlyDonation);
 	$("#pp_amount").on("change", handleMonthlyDonation);
