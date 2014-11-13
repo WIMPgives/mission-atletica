@@ -96,7 +96,7 @@ p, li
 }
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
 {
-	width: 93px; /* override bootstrap select */
+	width: 92px; /* override bootstrap select */
 }
 label
 {

@@ -112,7 +112,7 @@ function donate_func( $atts )
 
 	if($atts['type'] == "simple")
 	{
-		// use more elaborate payment form directly to missionatletica@gmail.com
+		// use simple payment form directly to missionatletica@gmail.com
 		ob_start();
 ?>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -136,13 +136,18 @@ function donate_func( $atts )
 	else if($atts['type'] == "advanced")
 	{
 		// use more elaborate payment form directly to missionatletica@gmail.com
+		$nMonths = intval($atts['months']);
+		if($nMonths < 2 || $nMonths > 24)
+		{
+			$nMonths = 24;
+		}
 		ob_start();
 ?>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input name="cmd" id="pp_donations" type="hidden" value="_donations" />
 <input name="cmd" id="pp_subscription" type="hidden" value="_xclick-subscriptions" disabled />
 <input name="a3" id="pp_a3" type="hidden" value="" disabled />
-<input name="p3" id="pp_p3" type="hidden" value="24" disabled />
+<input name="p3" id="pp_p3" type="hidden" value="<?php echo $nMonths; ?>" disabled />
 <input name="t3" id="pp_t3" type="hidden" value="M" disabled />
 <input name="page_style" type="hidden" value="primary" />
 <input name="image_url" type="hidden" value="<?php echo get_template_directory_uri(); ?>/images/PP_logo_313x100.png" />
