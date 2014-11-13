@@ -52,11 +52,11 @@ function handleMonthlyDonation()
 		document.getElementById("pp_donations").disabled = false;
 	}
 }
-$(function(){
+( function( $ ){
 	handleMonthlyDonation();
 	$("#pp_src").on("click", handleMonthlyDonation);
 	$("#pp_amount").on("change", handleMonthlyDonation);
-});
+} )( jQuery );
 </script>
 </body>
 </html>
