@@ -94,7 +94,18 @@ p, li
 	-moz-border-radius: 0px;
 	border-radius: 0px;
 }
-
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+{
+	width: 93px; /* override bootstrap select */
+}
+label
+{
+	font-size: 2em;
+}
+label input[type="checkbox"]
+{
+	zoom: 2;
+}
 .footer {
 
 }
