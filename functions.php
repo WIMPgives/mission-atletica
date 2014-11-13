@@ -102,6 +102,22 @@ function mission_atletica_resources() {
 }
 add_action( 'wp_enqueue_scripts', 'mission_atletica_resources' );
 
+
+function donate_func( $atts )
+{
+	$strResult = '<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input name="cmd" type="hidden" value="_s-xclick" /><input name="hosted_button_id" type="hidden" value="ATMU6LX63YN26" /><button class="btn btn-primary btn-lg">Donate</button></form>';
+
+	if($atts['type'] == "advanced")
+	{
+		// use more elaborate payment form directly to missionatletica@gmail.com
+		$strResult = 'Put advanced donate button here';
+	}
+
+	return $strResult;
+}
+add_shortcode( 'donate', 'donate_func' );
+
+
 /**
  * Loads any scripts or styles into the admin area of WordPress
  */

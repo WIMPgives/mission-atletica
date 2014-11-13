@@ -223,3 +223,67 @@ ul.social li {
 .left-footer li {
 	float:none;
 }
+
+/* Neil Patrick Harris [8:29 PM] */
+body {overflow-x: hidden;}
+
+@media (max-width: 991px) {
+	.row.donate.invest.sidebar-widget {margin-top: 50px;}
+	.sponsor-wrapper img {width: inherit;}
+
+
+}
+
+.wpcf7-form-control-wrap input {
+	background: #f7f7f7  !important;
+	border: 1px solid #cccccc  !important;
+	color: #111111  !important;
+	padding: 8px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
+	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
+	box-shadow: inset 0px 3px 7px 0px #ddd;
+}
+
+.wpcf7-form-control-wrap textarea {
+	width: 100% !important;
+	background: #f7f7f7  !important;
+	border: 1px solid #cccccc  !important;
+	color: #111111  !important;
+	padding: 8px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
+	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
+	box-shadow: inset 0px 3px 7px 0px #ddd;
+}
+
+.wpcf7 form div p span input {
+	background: #f7f7f7  !important;
+	border: 1px solid #cccccc  !important;
+	color: #111111  !important;
+	padding: 8px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
+	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
+	box-shadow: inset 0px 3px 7px 0px #ddd;
+}
+
+.wpcf7-submit {
+	width: 280px;
+	background: #fff !important;
+	border: 1px solid #cccccc  !important;
+	color: #999 !important;
+	padding: 8px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 7px 0px #ddd;
+	-moz-box-shadow: inset 0px 0px 7px 0px #ddd;
+	box-shadow: inset 0px 0px 7px 0px #ddd;
+}
