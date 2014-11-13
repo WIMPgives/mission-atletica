@@ -167,6 +167,10 @@ ul.social li {
 	top:11px;
 	left:20px;
 }
+.carousel-inner>.item>img, .carousel-inner>.item>a>img
+{
+	min-height: 300px;
+}
 .carousel-caption
 {
 	padding: 0 15px;
@@ -290,4 +294,16 @@ body {overflow-x: hidden;}
  span.wpcf7-list-item {
      display: block !important;
      padding-bottom:5px;
+ }
+ 
+ @media (max-width: 767px)
+ {
+	 .carousel-caption h1
+	 {
+		 font-size: 22px;
+	 }
+	 .carousel-caption p
+	 {
+		 font-size: 14px;
+	 }
  }
