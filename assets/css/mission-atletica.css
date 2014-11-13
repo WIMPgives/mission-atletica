@@ -227,7 +227,16 @@ ul.social li {
 
 body {overflow-x: hidden;}
 
-.imgborder {border:1px solid #ddd; background: #fff; padding: 5px;}
+.imgborder {
+	border:1px solid #ddd; 
+	background: #fff; 
+	padding: 5px;
+	margin-right:10px;
+}
+
+.entry-content {
+	margin-top:10px;
+}
 
 @media (max-width: 991px) {
 	.row.donate.invest.sidebar-widget {margin-top: 50px;}
