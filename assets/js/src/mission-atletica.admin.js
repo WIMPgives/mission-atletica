@@ -16,9 +16,8 @@ var mawp;
 
 	mawp = {
 		init : function() {
-			selectors.saveBtn     = $( document.getElementById( 'mawp-save-dashboard' ) );
-			selectors.nonce       = null;
-			selectors.currentDash = null;
+			selectors.saveBtn = $( document.getElementById( 'mawp-save-dashboard' ) );
+			selectors.nonce   = null;
 
 			// Initialize the click event
 			selectors.saveBtn.click( function( event ) {
@@ -26,10 +25,9 @@ var mawp;
 
 				var type = $( this ).attr( 'data-type' );
 
-				selectors.currentDash = $( this ).parent().prev();
-				selectors.nonce       = $( document.getElementById( 'mawp_dashboard_invest' ) ).val();
+				selectors.nonce = $( document.getElementById( 'mawp_dashboard_invest' ) ).val();
 
-				mawp.processAjax( '', type );
+				mawp.processAjax( type );
 			});
 		},
 
@@ -39,28 +37,28 @@ var mawp;
 		 * @param object
 		 * @param type
 		 */
-		processAjax : function( object, type ) {
-			var formInput = selectors.currentDash.find( 'input[type="text"]' ),
-				hook      = 'mawp_' + type + '_dashboard',
-				data      = {},
-				count     = 0;
-
-			formInput.each( function( input ) {
-				data[ data ][ count ] = $( this ).val();
-
-				count++;
-			} );
-
-			data
+		processAjax : function( type ) {
+			var hook      = 'mawp_' + type + '_dashboard';
 
 			wp.ajax.send( hook, {
-				success: ajaxSuccess(),
-				error:   ajaxError(),
+				success: mawp.ajaxSuccess(),
+				error:   mawp.ajaxError(),
 				data: {
-					nonce: selectors.nonce,
-					action:
+					nonce:     selectors.nonce,
+					fundGoal:  $( document.getElementById( 'fundraising-goal-' + type ) ).val(),
+					donations: $( document.getElementById( 'donations-date-' + type ) ).val()
 				}
 			} );
+		},
+
+		ajaxSuccess : function( response ) {
+			console.log('SUCCESS' );
+			console.log( response );
+		},
+
+		ajaxError : function( response ) {
+			console.log( 'ERROR' );
+			console.log( response );
 		}
 	};
 

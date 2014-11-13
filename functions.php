@@ -102,6 +102,17 @@ function mission_atletica_resources() {
 }
 add_action( 'wp_enqueue_scripts', 'mission_atletica_resources' );
 
+/**
+ * Loads any scripts or styles into the admin area of WordPress
+ */
+function mission_atletica_admin_resources() {
+	// Load our dev copies if script debug is enabled in WP.
+	// Add define( 'SCRIPT_DEBUG', TRUE ); to wp_config.php (FOR DEV SERVERS ONLY!)
+	$min = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
+
+	wp_enqueue_script( 'mission-atletica-navigation', get_template_directory_uri() . "/assets/js/mission-atletica.admin{$min}.js", array( 'jquery', 'wp-util' ), MAWP_VERSION, true );
+}
+add_action( 'admin_enqueue_scripts', 'mission_atletica_admin_resources' );
 
 function donate_func( $atts )
 {
@@ -116,19 +127,6 @@ function donate_func( $atts )
 	return $strResult;
 }
 add_shortcode( 'donate', 'donate_func' );
-
-
-/**
- * Loads any scripts or styles into the admin area of WordPress
- */
-function mission_atletica_admin_resources() {
-	// Load our dev copies if script debug is enabled in WP.
-	// Add define( 'SCRIPT_DEBUG', TRUE ); to wp_config.php (FOR DEV SERVERS ONLY!)
-	$min = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
-
-	wp_enqueue_script( 'mission-atletica-navigation', get_template_directory_uri() . "/assets/js/mission-atletica.admin{$min}.js", array( 'jquery', 'wp-util' ), MAWP_VERSION, true );
-}
-add_action( 'admin_enqueue_scripts', 'mission_atletica_admin_resources' );
 
 /**
  * Load the Bootstrap walker class

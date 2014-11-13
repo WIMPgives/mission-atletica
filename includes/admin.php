@@ -54,7 +54,7 @@ class WPMA_Dashboard_Widgets {
 							<label>Donations to Date</label>
 						</th>
 						<td>
-							<input type="text" name="invest_calc[donations]" id="donations-date" class="regular-text" />
+							<input type="text" name="invest_calc[donations]" id="donations-date-invest" class="regular-text" />
 						</td>
 					</tr>
 				</tbody>
@@ -67,7 +67,19 @@ class WPMA_Dashboard_Widgets {
 	}
 
 	public static function save_invest() {
-		var_dump($_POST);
+		if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'mawp_save_ajax' ) ) {
+			wp_send_json_error();
+		}
+
+		$data = array();
+
+		if ( isset( $_POST['fundGoal'] ) ) {
+			$data['fund-goal'] = sanitize_text_field( $_POST['fundGoal'] );
+		}
+
+		if ( isset( $_POST['donations'] ) ) {
+			$data[''] = '';
+		}
 	}
 }
 new WPMA_Dashboard_Widgets();
