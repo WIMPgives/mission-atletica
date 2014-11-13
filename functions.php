@@ -103,6 +103,13 @@ function mission_atletica_resources() {
 }
 add_action( 'wp_enqueue_scripts', 'mission_atletica_resources' );
 
+
+function donate_func( $atts ){
+	var_dump($atts);
+}
+add_shortcode( 'donate', 'donate_func' );
+
+
 /**
  * Load the Bootstrap walker class
  */
