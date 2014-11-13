@@ -16,7 +16,7 @@ var mawp;
 
 	mawp = {
 		init : function() {
-			selectors.saveBtn = $( document.getElementById( 'mawp-save-dashboard' ) );
+			selectors.saveBtn = $( '.mawp-save-dashboard' );
 			selectors.nonce   = null;
 
 			// Initialize the click event
@@ -25,7 +25,7 @@ var mawp;
 
 				var type = $( this ).attr( 'data-type' );
 
-				selectors.nonce = $( document.getElementById( 'mawp_dashboard_invest' ) ).val();
+				selectors.nonce = $( document.getElementById( 'mawp_dashboard_' + type ) ).val();
 
 				mawp.processAjax( type );
 			});

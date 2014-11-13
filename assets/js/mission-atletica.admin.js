@@ -22,7 +22,7 @@ var mawp;
 
 				var type = $( this ).attr( 'data-type' );
 
-				selectors.nonce = $( document.getElementById( 'mawp_dashboard_invest' ) ).val();
+				selectors.nonce = $( document.getElementById( 'mawp_dashboard_' + type ) ).val();
 
 				mawp.processAjax( type );
 			});
