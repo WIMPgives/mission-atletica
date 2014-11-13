@@ -267,7 +267,7 @@ body {overflow-x: hidden;}
 	box-shadow: inset 0px 0px 7px 0px #ddd;
 }
 
- span.wpcf7-list-item {
+ span.wpcf7-list-item input {
      display: block;
      padding-bottom:5px;
  }
