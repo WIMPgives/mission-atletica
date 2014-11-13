@@ -111,7 +111,7 @@ function donate_func( $atts )
 	if($atts['type'] == "advanced")
 	{
 		// use more elaborate payment form directly to missionatletica@gmail.com
-//		$strResult = '';
+		$strResult = 'Put advanced donate button here';
 	}
 
 	return $strResult;
