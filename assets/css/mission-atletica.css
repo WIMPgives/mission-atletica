@@ -167,10 +167,6 @@ ul.social li {
 	top:11px;
 	left:20px;
 }
-.carousel-inner>.item>img, .carousel-inner>.item>a>img
-{
-	min-height: 300px;
-}
 .carousel-caption
 {
 	padding: 0 15px;
@@ -298,6 +294,14 @@ body {overflow-x: hidden;}
  
  @media (max-width: 767px)
  {
+	 .carousel-inner
+	 {
+		 padding-bottom: 60px;
+	 }
+	 .carousel-caption
+	 {
+		 margin-bottom: -60px;
+	 }
 	 .carousel-caption h1
 	 {
 		 font-size: 22px;
