@@ -111,7 +111,37 @@ function donate_func( $atts )
 	if($atts['type'] == "advanced")
 	{
 		// use more elaborate payment form directly to missionatletica@gmail.com
-		$strResult = 'Put advanced donate button here';
+		ob_start();
+?>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input name="cmd" id="pp_donations" type="hidden" value="_donations" />
+<input name="cmd" id="pp_subscription" type="hidden" value="_xclick-subscriptions" disabled />
+<input name="a3" id="pp_a3" type="hidden" value="" disabled />
+<input name="p3" id="pp_p3" type="hidden" value="24" disabled />
+<input name="t3" id="pp_t3" type="hidden" value="M" disabled />
+<input name="page_style" type="hidden" value="primary" />
+<input name="image_url" type="hidden" value="http://mawp.wpengine.com/wp-content/themes/mission-atletica/images/PP_logo_313x100.png" />
+<input name="cpp_logo_image" type="hidden" value="http://mawp.wpengine.com/wp-content/themes/mission-atletica/images/PP_logo_190x53.png" />
+<input name="no_note" type="hidden" value="1" />
+<input name="no_shipping" type="hidden" value="1" />
+<input name="return" type="hidden" value="http://mawp.wpengine.com/thank-you/" />
+<input name="rm" type="hidden" value="1" />
+<input name="cbt" type="hidden" value="Mission Atletica" />
+<input name="cancel_return" type="hidden" value="http://mawp.wpengine.com/donate/" />
+<input name="item_name" type="hidden" value="Donation to Mission Atletica" />
+<select name="amount" id="pp_amount">
+	<option value="25.00">$25</option>
+	<option value="50.00">$50</option>
+	<option value="100.00" selected>$100</option>
+	<option value="500.00">$500</option>
+	<option value="">Other</option>
+</select>
+<input name="business" type="hidden" value="MW68R2RMFJEAA" />
+<button class="btn btn-primary btn-lg">Donate</button>
+<label><input type="checkbox" name="src" id="pp_src" value="1" /> Make it monthly</label>
+</form>
+<?php
+		$strResult = ob_get_clean();
 	}
 
 	return $strResult;
