@@ -139,8 +139,8 @@ function donate_func( $atts )
 	<option value="500.00">$500</option>
 	<option value="">Other</option>
 </select>
-<label><input type="checkbox" name="src" id="pp_src" value="1" /> Make it monthly</label>
-<br/>
+&nbsp;&nbsp;<label><input type="checkbox" name="src" id="pp_src" value="1" /> Make it monthly</label>
+<br/><br/>
 <button class="btn btn-primary btn-lg">Donate</button>
 </form>
 <?php
