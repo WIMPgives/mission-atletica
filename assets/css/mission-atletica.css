@@ -239,8 +239,8 @@ ul.social li {
 body {overflow-x: hidden;}
 
 .imgborder {
-	border:1px solid #ddd; 
-	background: #fff; 
+	border:1px solid #ddd;
+	background: #fff;
 	padding: 5px;
 	margin-right:10px;
 }
@@ -254,8 +254,8 @@ body {overflow-x: hidden;}
 	.sponsor-wrapper img {width: inherit;}
 }
 
-.wpcf7-form-control-wrap input, 
-.wpcf7-form-control-wrap textarea, 
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea,
 .wpcf7 form div p span input {
 	background: #f7f7f7  !important;
 	border: 1px solid #cccccc  !important;
@@ -291,7 +291,7 @@ body {overflow-x: hidden;}
      display: block !important;
      padding-bottom:5px;
  }
- 
+
  @media (max-width: 767px)
  {
 	 .carousel-inner
