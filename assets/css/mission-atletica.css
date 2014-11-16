@@ -93,7 +93,10 @@ p, li
 	 -webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+	color:#333;
+	font-weight:bold;
 }
+
 .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
 {
 	width: 92px; /* override bootstrap select */
@@ -106,6 +109,7 @@ label input[type="checkbox"]
 {
 	zoom: 2;
 }
+
 .footer {
 
 }

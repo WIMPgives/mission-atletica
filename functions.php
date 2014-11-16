@@ -83,14 +83,14 @@ function mission_atletica_widgets_init() {
 add_action( 'widgets_init', 'mission_atletica_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts and styles for the front-end theme
  */
 function mission_atletica_resources() {
 	// Load our dev copies if script debug is enabled in WP.
 	// Add define( 'SCRIPT_DEBUG', TRUE ); to wp_config.php (FOR DEV SERVERS ONLY!)
 	$min = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
 
-	wp_enqueue_style( 'mission-atletica-fonts', "//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:400", array(), MAWP_VERSION );
+	wp_enqueue_style( 'mission-atletica-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic|Oswald:400', array(), MAWP_VERSION );
 	wp_enqueue_style( 'mawp-bootstrap', get_template_directory_uri() . '/assets/css/vendor/bootstrap.min.css', array(), '3.3.0' );
 	wp_enqueue_style( 'bootstrap-select-style', get_template_directory_uri() . "/assets/css/bootstrap-select.min.css", array(), '1.6.3' );
 	wp_enqueue_style( 'mission-atletica-style', get_template_directory_uri() . "/assets/css/mission-atletica.css", array(), MAWP_VERSION );
@@ -105,6 +105,17 @@ function mission_atletica_resources() {
 }
 add_action( 'wp_enqueue_scripts', 'mission_atletica_resources' );
 
+/**
+ * Loads any scripts or styles into the admin area of WordPress
+ */
+function mission_atletica_admin_resources() {
+	// Load our dev copies if script debug is enabled in WP.
+	// Add define( 'SCRIPT_DEBUG', TRUE ); to wp_config.php (FOR DEV SERVERS ONLY!)
+	$min = ( defined( 'SCRIPT_DEBUG' ) && true === SCRIPT_DEBUG ) ? '' : '.min';
+
+	wp_enqueue_script( 'mission-atletica-navigation', get_template_directory_uri() . "/assets/js/mission-atletica.admin{$min}.js", array( 'jquery', 'wp-util' ), MAWP_VERSION, true );
+}
+add_action( 'admin_enqueue_scripts', 'mission_atletica_admin_resources' );
 
 function donate_func( $atts )
 {
@@ -180,7 +191,6 @@ function donate_func( $atts )
 }
 add_shortcode( 'donate', 'donate_func' );
 
-
 /**
  * Load the Bootstrap walker class
  */
@@ -195,6 +205,11 @@ require get_template_directory() . '/includes/template-tags.php';
  * Load our post types
  */
 require get_template_directory() . '/includes/post-types.php';
+
+/**
+ * Load any admin specific code
+ */
+require get_template_directory() . '/includes/admin.php';
 
 /**
  * Custom functions that act independently of the theme templates.

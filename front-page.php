@@ -3,7 +3,7 @@
 get_header(); ?>
 
 	<div class="row">
-		<div class="col-md-9">
+		<div class="<?php echo esc_attr( mission_atletica_get_col_widths() ); ?>">
 			<div class="row slideshow">
 				<div class="col-md-12">
 					<?php echo do_shortcode( '[image-carousel]' ); ?>

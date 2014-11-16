@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-<div class="col-md-9">
+<div class="<?php echo esc_attr( mission_atletica_get_col_widths() ); ?>">
 
 	<div class="row  content">
 
@@ -20,9 +20,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
-
 			<?php endwhile; // end of the loop. ?>
-
 
 	</div>
 </div>
