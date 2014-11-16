@@ -14,28 +14,28 @@ get_header(); ?>
 				<div class="col-md-12">
 
 					<div class="col-sm-4">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/edgarWshoes200.png" alt="Read our story" />
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/edgarWshoes200.png' ); ?>" alt="Read our story" />
 
 						<p class="btn-caption">Read Our Story</p>
 
 						<p class="btn-text">
-							Meet the man behind the mission.<br /><a href="http://mawp.wpengine.com/about-mission-atletica/">Learn more...</a></p>
+							Meet the man behind the mission.<br /><a href="<?php echo esc_url( home_url( '/about-mission-atletica/' ) ); ?>">Learn more...</a></p>
 					</div>
 					<div class="col-sm-4">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/OurMission.png" alt="Support our mission" />
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/OurMission.png' ); ?>" alt="Support our mission" />
 
 						<p class="btn-caption">Support Our Mission</p>
 
 						<p class="btn-text">
-							Donate shoes, money or your time.<br /><a href="http://mawp.wpengine.com/donate/">Learn more...</a></p>
+							Donate shoes, money or your time.<br /><a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Learn more...</a></p>
 					</div>
 					<div class="col-sm-4">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/SponsorsPict.png" alt="Become a sponsor" />
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/SponsorsPict.png' ); ?>" alt="Become a sponsor" />
 
 						<p class="btn-caption">Become a Sponsor</p>
 
 						<p class="btn-text">
-							Help kids experience the joy of running.<br /><a href="http://mawp.wpengine.com/sponsorship-opportunities/">Learn more...</a>
+							Help kids experience the joy of running.<br /><a href="<?php echo esc_url( home_url( '/sponsorship-opportunities/' ) ); ?>">Learn more...</a>
 						</p>
 					</div>
 				</div>
