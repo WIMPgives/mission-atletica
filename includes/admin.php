@@ -73,8 +73,10 @@ class WPMA_Dashboard_Widgets {
 				</tbody>
 			</table>
 			<p class="submit">
-				<input type="submit" id="mawp-save-dashboard" name="submit" value="Save" data-type="invest" class="button button-primary mawp-save-dashboard" />
+				<input type="submit" id="mawp-save-dashboard" name="submit" value="Save" data-type="invest" class="button button-primary mawp-save-dashboard" style="display:inline-block" />
+				<span class="spinner mawp-saving" style="float:none; position:relative; top:-3px;"></span>
 			</p>
+			<div class="message-output" style="display:none;"></div>
 		</form>
 		<?php
 	}
@@ -110,8 +112,10 @@ class WPMA_Dashboard_Widgets {
 				</tbody>
 			</table>
 			<p class="submit">
-				<input type="submit" id="mawp-save-dashboard" name="submit" value="Save" data-type="donate" class="button button-primary mawp-save-dashboard" />
+				<input type="submit" id="mawp-save-dashboard" name="submit" value="Save" data-type="donate" class="button button-primary mawp-save-dashboard" style="display:inline-block" />
+				<span class="spinner mawp-saving" style="float:none; position:relative; top:-3px;"></span>
 			</p>
+			<div class="message-output" style="display:none;"></div>
 		</form>
 	<?php
 	}
@@ -121,7 +125,7 @@ class WPMA_Dashboard_Widgets {
 	 */
 	public static function save_invest() {
 		if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'mawp_save_ajax' ) ) {
-			wp_send_json_error();
+			wp_send_json_error( 'Could not validate request' );
 		}
 
 		$data = array();
@@ -136,7 +140,7 @@ class WPMA_Dashboard_Widgets {
 
 		update_option( 'mawp_invest', $data );
 
-		wp_send_json_success();
+		wp_send_json_success( 'Saved!' );
 	}
 
 	/**
@@ -144,7 +148,7 @@ class WPMA_Dashboard_Widgets {
 	 */
 	public static function save_donate() {
 		if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'mawp_save_ajax' ) ) {
-			wp_send_json_error();
+			wp_send_json_error( 'Could not validate request' );
 		}
 
 		$data = array();
@@ -159,7 +163,7 @@ class WPMA_Dashboard_Widgets {
 
 		update_option( 'mawp_donate', $data );
 
-		wp_send_json_success();
+		wp_send_json_success( 'Saved!' );
 	}
 }
 new WPMA_Dashboard_Widgets();

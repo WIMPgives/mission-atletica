@@ -93,7 +93,10 @@ p, li
 	 -webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;
+	color:#333;
+	font-weight:bold;
 }
+
 
 .footer {
 

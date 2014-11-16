@@ -206,3 +206,91 @@ function mission_atletica_list_sponsors() {
 		<?php endforeach;
 	endif;
 }
+
+/**
+ * Fetches the options data set for the donation calculators.
+ * Accepts one argument with a value of 'invest' or 'donate'.
+ *
+ * @param string $type The type of data we want to return
+ *
+ * @return bool|mixed|void
+ */
+function mission_atletica_get_calculator_data( $type = null ) {
+	if ( ! isset( $type ) ) {
+		return false;
+	}
+
+	// Define our list of options we can request
+	$options = array(
+		'invest',
+		'donate',
+	);
+
+	// Make sure we requested a proper value
+	if ( ! in_array( $type, $options ) ) {
+		return false;
+	}
+
+	return get_option( 'mawp_' . $type );
+}
+
+/**
+ * Calculates the percentage between our donations goal and status
+ *
+ * @param mixed $amount The current progress. Will convert strings to ints, but integers are
+ *                      recommended.
+ * @param mixed $goal   The max goal we need to hit. Will convert strings to ints, but integers
+ *                      are recommended.
+ *
+ * @return float|int
+ */
+function mission_atletica_get_percentage( $amount, $goal ) {
+	// Return early if one of our values is empty
+	if ( empty( $amount ) || empty( $goal ) ) {
+		return 0;
+	}
+
+	// Convert our strings to integers and extract only the numbers
+	if ( is_string( $amount ) ) {
+		$amount = (int) filter_var( $amount, FILTER_SANITIZE_NUMBER_INT );
+	}
+	if ( is_string( $goal ) ) {
+		$goal   = (int) filter_var( $goal, FILTER_SANITIZE_NUMBER_INT );
+	}
+
+	// Return with a zero percentage if any number is zero
+	if ( 0 === $amount || 0 === $goal ) {
+		return 0;
+	} else {
+		return round( ( $amount / $goal ) * 100 );
+	}
+}
+
+/**
+ * @return bool
+ */
+function mission_atletica_has_sidebar_data() {
+	$invest = mission_atletica_get_calculator_data( 'invest' );
+	$donate = mission_atletica_get_calculator_data( 'donate' );
+
+
+	if ( ! array_filter( $invest ) && ! array_filter( $donate ) ) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+/**
+ * Figures out if we need to load the layout in a two column or one column. This is determined
+ * if there is sidebar content or not.
+ *
+ * @return string
+ */
+function mission_atletica_get_col_widths() {
+	if ( mission_atletica_has_sidebar_data() ) {
+		return 'col-md-9';
+	} else {
+		return 'col-md-12';
+	}
+}

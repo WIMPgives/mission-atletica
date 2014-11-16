@@ -1,4 +1,4 @@
-/*! Mission Atletica - v0.1.0 - 2014-11-12
+/*! Mission Atletica - v0.1.0 - 2014-11-16
  * http://missionatletica.com
  * Copyright (c) 2014
 ; * Licensed GPLv2+
@@ -13,16 +13,21 @@ var mawp;
 
 	mawp = {
 		init : function() {
-			selectors.saveBtn = $( document.getElementById( 'mawp-save-dashboard' ) );
+			selectors.saveBtn = $( '.mawp-save-dashboard' );
+			selectors.spinner = null;
+			selectors.message = null;
 			selectors.nonce   = null;
 
 			// Initialize the click event
 			selectors.saveBtn.click( function( event ) {
 				event.preventDefault();
 
-				var type = $( this ).attr( 'data-type' );
+				var SELF = $( this ),
+					type = SELF.attr( 'data-type' );
 
-				selectors.nonce = $( document.getElementById( 'mawp_dashboard_' + type ) ).val();
+				selectors.nonce   = $( document.getElementById( 'mawp_dashboard_' + type ) ).val();
+				selectors.spinner = SELF.next();
+				selectors.message = SELF.parent().next();
 
 				mawp.processAjax( type );
 			});
@@ -35,11 +40,14 @@ var mawp;
 		 * @param type
 		 */
 		processAjax : function( type ) {
-			var hook      = 'mawp_' + type + '_dashboard';
+			var hook = 'mawp_' + type + '_dashboard';
+
+			// Display the saving spinner
+			selectors.spinner.css( 'display', 'inline-block' );
 
 			wp.ajax.send( hook, {
-				success: mawp.ajaxSuccess(),
-				error:   mawp.ajaxError(),
+				success: mawp.ajaxResponse,
+				error:   mawp.ajaxResponse,
 				data: {
 					nonce:     selectors.nonce,
 					fundGoal:  $( document.getElementById( 'fundraising-goal-' + type ) ).val(),
@@ -48,14 +56,9 @@ var mawp;
 			} );
 		},
 
-		ajaxSuccess : function( response ) {
-			console.log('SUCCESS' );
-			console.log( response );
-		},
-
-		ajaxError : function( response ) {
-			console.log( 'ERROR' );
-			console.log( response );
+		ajaxResponse : function( response ) {
+			selectors.spinner.css( 'display', 'none' );
+			selectors.message.html( '<p>' + response + '</p>' ).slideDown().delay( 5000 ).slideUp();
 		}
 	};
 
