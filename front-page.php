@@ -14,7 +14,7 @@ get_header(); ?>
 				<div class="col-md-12">
 
 					<div class="col-sm-4">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/edgarWshoes200.png' ); ?>" alt="Read our story" />
+						<a href="<?php echo esc_url( home_url( '/about-mission-atletica/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/edgarWshoes200.png' ); ?>" alt="Read our story" /></a>
 
 						<p class="btn-caption">Read Our Story</p>
 
@@ -22,7 +22,7 @@ get_header(); ?>
 							Meet the man behind the mission.<br /><a href="<?php echo esc_url( home_url( '/about-mission-atletica/' ) ); ?>">Learn more...</a></p>
 					</div>
 					<div class="col-sm-4">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/OurMission.png' ); ?>" alt="Support our mission" />
+						<a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/OurMission.png' ); ?>" alt="Support our mission" /></a>
 
 						<p class="btn-caption">Support Our Mission</p>
 
@@ -30,7 +30,7 @@ get_header(); ?>
 							Donate shoes, money or your time.<br /><a href="<?php echo esc_url( home_url( '/donate/' ) ); ?>">Learn more...</a></p>
 					</div>
 					<div class="col-sm-4">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/images/SponsorsPict.png' ); ?>" alt="Become a sponsor" />
+						<a href="<?php echo esc_url( home_url( '/sponsorship-opportunities/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/SponsorsPict.png' ); ?>" alt="Become a sponsor" /></a>
 
 						<p class="btn-caption">Become a Sponsor</p>
 
