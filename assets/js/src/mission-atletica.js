@@ -1,8 +1,5 @@
-/*! Mission Atletica - v0.1.0 - 2014-11-16
- * http://missionatletica.com
- * Copyright (c) 2014
- * Licensed GPLv2+
- */
+/* global selectpicker */
+
 function handleMonthlyDonation() {
 	// Reset applicable form inputs
 	var strAmount = document.getElementById( 'pp_amount' ).value;

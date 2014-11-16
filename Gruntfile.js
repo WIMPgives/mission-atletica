@@ -12,9 +12,9 @@ module.exports = function( grunt ) {
 				stripBanners: true,
 				banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
 					' * <%= pkg.homepage %>\n' +
-					' * Copyright (c) <%= grunt.template.today("yyyy") %>\n;' +
+					' * Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 					' * Licensed GPLv2+\n' +
-					' */'
+					' */\n'
 			},
 			mission_atletica: {
 				src: [
@@ -58,9 +58,9 @@ module.exports = function( grunt ) {
 				options: {
 					banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
 						' * <%= pkg.homepage %>\n' +
-						' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+						' * Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 						' * Licensed GPLv2+\n' +
-						' */',
+						' */\n',
 					mangle: {
 						except: ['jQuery']
 					}
