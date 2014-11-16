@@ -1,0 +1,37 @@
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea,
+.wpcf7 form div p span input {
+	background: #f7f7f7  !important;
+	border: 1px solid #cccccc  !important;
+	color: #111111  !important;
+	padding: 5px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 2px 6px 0px #ddd;
+	-moz-box-shadow: inset 0px 2px 6px 0px #ddd;
+	box-shadow: inset 0px 2px 6px 0px #ddd;
+}
+
+.wpcf7-form-control-wrap textarea {
+	width: 100% !important;
+}
+
+.wpcf7-submit {
+	width: 280px;
+	background: #fff !important;
+	border: 1px solid #cccccc  !important;
+	color: #999 !important;
+	padding: 5px !important;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0px 0px 7px 0px #ddd;
+	-moz-box-shadow: inset 0px 0px 7px 0px #ddd;
+	box-shadow: inset 0px 0px 7px 0px #ddd;
+}
+
+span.wpcf7-list-item {
+	display: block !important;
+	padding-bottom:5px;
+}

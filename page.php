@@ -15,13 +15,13 @@ get_header(); ?>
 <div class="<?php echo esc_attr( mission_atletica_get_col_widths() ); ?>">
 
 	<div class="row  content">
-
+		<div class="col-md-12">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
-
+		</div>
 	</div>
 </div>
 

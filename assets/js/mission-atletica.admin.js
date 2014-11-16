@@ -2,8 +2,7 @@
  * http://missionatletica.com
  * Copyright (c) 2014
 ; * Licensed GPLv2+
- */
-var mawp;
+ */var mawp;
 
 ( function( window, $, undefined ) {
 	'use strict';
