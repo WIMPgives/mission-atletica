@@ -378,3 +378,80 @@ function mission_atletica_donate_btn( $atts ) {
 	return $strResult;
 }
 add_shortcode( 'donate', 'mission_atletica_donate_btn' );
+
+/**
+ * Display template for comments and pingbacks.
+ *
+ */
+if ( ! function_exists( 'bootstrapwp_comment' ) ) :
+	function bootstrapwp_comment( $comment, $args, $depth ) {
+		$GLOBALS['comment'] = $comment;
+		switch ( $comment->comment_type ) :
+			case 'pingback' :
+			case 'trackback' :
+				?>
+
+				<li class="comment media" id="comment-<?php comment_ID(); ?>">
+				<div class="media-body">
+					<p>
+						<?php esc_html_e( 'Pingback:', 'bootstrapwp' ); ?> <?php comment_author_link(); ?>
+					</p>
+				</div><!--/.media-body -->
+				<?php
+				break;
+			default :
+				// Proceed with normal comments.
+				global $post; ?>
+
+				<li class="comment media" id="li-comment-<?php comment_ID(); ?>">
+					<a href="<?php echo esc_url( $comment->comment_author_url ); ?>" class="pull-left">
+						<?php echo get_avatar( $comment, 64 ); ?>
+					</a>
+
+					<div class="media-body">
+						<h4 class="media-heading comment-author vcard">
+							<?php
+							printf( '<cite class="fn">%1$s %2$s</cite>',
+								get_comment_author_link(),
+								// If current post author is also comment author, make it known visually.
+								( $comment->user_id === $post->post_author ) ? '<span class="label"> ' . __(
+										'Post author',
+										'bootstrapwp'
+									) . '</span> ' : '' ); ?>
+						</h4>
+
+						<?php if ( '0' == $comment->comment_approved ) : ?>
+							<p class="comment-awaiting-moderation"><?php _e(
+									'Your comment is awaiting moderation.',
+									'bootstrapwp'
+								); ?></p>
+						<?php endif; ?>
+
+						<?php comment_text(); ?>
+						<p class="meta">
+							<?php printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
+								esc_url( get_comment_link( $comment->comment_ID ) ),
+								get_comment_time( 'c' ),
+								sprintf(
+									__( '%1$s at %2$s', 'bootstrapwp' ),
+									get_comment_date(),
+									get_comment_time()
+								)
+							); ?>
+						</p>
+
+						<p class="reply">
+							<?php comment_reply_link( array_merge( $args, array(
+									'reply_text' => __( 'Reply <span>&darr;</span>', 'bootstrapwp' ),
+									'depth'      => $depth,
+									'max_depth'  => $args['max_depth'],
+								)
+							) ); ?>
+						</p>
+					</div>
+					<!--/.media-body -->
+				<?php
+				break;
+		endswitch;
+	}
+endif;
