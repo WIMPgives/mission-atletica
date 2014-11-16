@@ -24,7 +24,7 @@ if ( mission_atletica_has_sidebar_data() ) : ?>
 					</div>
 					<div class="right-col">
 						<h2>Invest</h2>
-						<p>Fundraising Goal <span class="text-highlight-light"><?php echo esc_html( $invest['fund-goal'] ); ?></span>
+						<p>Fundraising Goal <span class="text-highlight-light"><?php echo esc_html( $invest['fund-goal'] ); ?></span><br />
 						Donations to date <span class="text-highlight-light"><?php echo esc_html( $invest['donations'] ); ?></span></p>
 					</div>
 					<div class="progress">
