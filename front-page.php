@@ -10,7 +10,7 @@ get_header(); ?>
 				</div>
 			</div>
 
-			<div class="row  quicklinks">
+			<div class="row quicklinks">
 				<div class="col-md-12">
 
 					<div class="col-sm-4">
