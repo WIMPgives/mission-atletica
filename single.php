@@ -1,32 +1,30 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying all sponsor posts.
  *
  * @package Mission Atletica
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="<?php echo esc_attr( mission_atletica_get_col_widths() ); ?>">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<div class="row  content">
+			<div class="col-md-12">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'content', 'single' ); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
 
-			<?php mission_atletica_post_nav(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					<?php
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+				<?php endwhile; // end of the loop. ?>
+			</div>
+		</div>
+	</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

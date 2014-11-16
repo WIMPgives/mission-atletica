@@ -12,13 +12,20 @@ module.exports = function( grunt ) {
 				stripBanners: true,
 				banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
 					' * <%= pkg.homepage %>\n' +
-					' * Copyright (c) <%= grunt.template.today("yyyy") %>\n;' +
+					' * Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 					' * Licensed GPLv2+\n' +
 					' */\n'
 			},
 			mission_atletica: {
 				src: [
-					'assets/js/src/*.js'
+					'assets/js/src/*.js',
+					'!assets/js/src/mission-atletica.admin.js'
+				],
+				dest: 'assets/js/mission-atletica.js'
+			},
+			admin: {
+				src: [
+					'assets/js/src/mission-atletica.admin.js'
 				],
 				dest: 'assets/js/mission-atletica.admin.js'
 			}
@@ -45,12 +52,13 @@ module.exports = function( grunt ) {
 		uglify: {
 			all: {
 				files: {
-					'assets/js/mission-atletica.min.js': ['assets/js/mission-atletica.admin.js']
+					'assets/js/mission-atletica.min.js': ['assets/js/mission-atletica.js'],
+					'assets/js/mission-atletica.admin.min.js': ['assets/js/mission-atletica.admin.js']
 				},
 				options: {
 					banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
 						' * <%= pkg.homepage %>\n' +
-						' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
+						' * Copyright (c) <%= grunt.template.today("yyyy") %>\n' +
 						' * Licensed GPLv2+\n' +
 						' */\n',
 					mangle: {
@@ -77,7 +85,7 @@ module.exports = function( grunt ) {
 					' * <%= pkg.homepage %>\n' +
 					' * Copyright (c) <%= grunt.template.today("yyyy") %>;\n' +
 					' * Licensed GPLv2+\n' +
-					' */\n',
+					' */',
 				keepSpecialComments: 0
 			},
 			minify: {

@@ -1,0 +1,28 @@
+.entry-content img {
+	max-width:100%;
+	height:auto;
+}
+
+@media (max-width: 991px) {
+	.row.donate.invest.sidebar-widget {
+		margin-top: 50px;
+	}
+	.sponsor-wrapper img {
+		width: inherit;
+	}
+}
+
+@media (max-width: 767px) {
+	.carousel-inner {
+		padding-bottom: 60px;
+	}
+	.carousel-caption {
+		margin-bottom: -60px;
+	}
+	.carousel-caption h1 {
+		font-size: 22px;
+	}
+	.carousel-caption p {
+		font-size: 14px;
+	}
+}
