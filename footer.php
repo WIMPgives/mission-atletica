@@ -26,6 +26,38 @@
 			</div>
 		</div>
 <?php wp_footer(); ?>
+<script type="text/javascript">
+function handleMonthlyDonation()
+{
+	// reset applicable form inputs
+	var strAmount = document.getElementById("pp_amount").value;
+	document.getElementById("pp_donations").disabled = true;
+	document.getElementById("pp_subscription").disabled = true;
+	document.getElementById("pp_a3").disabled = true;
+	document.getElementById("pp_p3").disabled = true;
+	document.getElementById("pp_t3").disabled = true;
 
+	if(strAmount.length && document.getElementById("pp_src").checked)
+	{
+		// recurring monthly payments
+		document.getElementById("pp_subscription").disabled = false;
+		document.getElementById("pp_a3").value = strAmount;
+		document.getElementById("pp_a3").disabled = false;
+		document.getElementById("pp_p3").disabled = false;
+		document.getElementById("pp_t3").disabled = false;
+	}
+	else
+	{
+		// one-time payment
+		document.getElementById("pp_donations").disabled = false;
+	}
+}
+( function( $ ){
+	$('.selectpicker').selectpicker();
+	handleMonthlyDonation();
+	$("#pp_src").on("click", handleMonthlyDonation);
+	$("#pp_amount").on("change", handleMonthlyDonation);
+} )( jQuery );
+</script>
 </body>
 </html>

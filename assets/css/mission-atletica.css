@@ -97,6 +97,18 @@ p, li
 	font-weight:bold;
 }
 
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn)
+{
+	width: 92px; /* override bootstrap select */
+}
+label
+{
+	font-size: 1.5em;
+}
+label input[type="checkbox"]
+{
+	zoom: 2;
+}
 
 .footer {
 
@@ -227,54 +239,42 @@ ul.social li {
 	float:none;
 }
 
-/* Neil Patrick Harris [8:29 PM] */
+
 body {overflow-x: hidden;}
+
+.imgborder {
+	border:1px solid #ddd;
+	background: #fff;
+	padding: 5px;
+	margin-right:10px;
+}
+
+.entry-content {
+	margin-top:10px;
+}
 
 @media (max-width: 991px) {
 	.row.donate.invest.sidebar-widget {margin-top: 50px;}
 	.sponsor-wrapper img {width: inherit;}
-
-
 }
 
-.wpcf7-form-control-wrap input {
-	background: #f7f7f7  !important;
-	border: 1px solid #cccccc  !important;
-	color: #111111  !important;
-	padding: 8px !important;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
-	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
-	box-shadow: inset 0px 3px 7px 0px #ddd;
-}
-
-.wpcf7-form-control-wrap textarea {
-	width: 100% !important;
-	background: #f7f7f7  !important;
-	border: 1px solid #cccccc  !important;
-	color: #111111  !important;
-	padding: 8px !important;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
-	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
-	box-shadow: inset 0px 3px 7px 0px #ddd;
-}
-
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea,
 .wpcf7 form div p span input {
 	background: #f7f7f7  !important;
 	border: 1px solid #cccccc  !important;
 	color: #111111  !important;
-	padding: 8px !important;
+	padding: 5px !important;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	-webkit-box-shadow: inset 0px 3px 7px 0px #ddd;
-	-moz-box-shadow: inset 0px 3px 7px 0px #ddd;
-	box-shadow: inset 0px 3px 7px 0px #ddd;
+	-webkit-box-shadow: inset 0px 2px 6px 0px #ddd;
+	-moz-box-shadow: inset 0px 2px 6px 0px #ddd;
+	box-shadow: inset 0px 2px 6px 0px #ddd;
+}
+
+.wpcf7-form-control-wrap textarea {
+	width: 100% !important;
 }
 
 .wpcf7-submit {
@@ -282,7 +282,7 @@ body {overflow-x: hidden;}
 	background: #fff !important;
 	border: 1px solid #cccccc  !important;
 	color: #999 !important;
-	padding: 8px !important;
+	padding: 5px !important;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -290,3 +290,28 @@ body {overflow-x: hidden;}
 	-moz-box-shadow: inset 0px 0px 7px 0px #ddd;
 	box-shadow: inset 0px 0px 7px 0px #ddd;
 }
+
+ span.wpcf7-list-item {
+     display: block !important;
+     padding-bottom:5px;
+ }
+
+ @media (max-width: 767px)
+ {
+	 .carousel-inner
+	 {
+		 padding-bottom: 60px;
+	 }
+	 .carousel-caption
+	 {
+		 margin-bottom: -60px;
+	 }
+	 .carousel-caption h1
+	 {
+		 font-size: 22px;
+	 }
+	 .carousel-caption p
+	 {
+		 font-size: 14px;
+	 }
+ }
